@@ -8,7 +8,8 @@
 		<center>
 			<?php include("menu.php");//导入导航栏?>
 			<h3>发布商品信息<h3>
-			<table border="1" width="300">
+			<form action="action.php?action=add" method="post" enctype="multipart/form-data">
+			<table border="0" width="400">
 				<tr>
 					<td align="right" >名称</td>
 					<td><input type="text" name="name"/></td>
@@ -42,6 +43,13 @@
 					<td align="right" >描述</td>
 					<td><textarea rows="10" cols="30"  name="note"/></textarea>
 				</tr>
+				<tr>
+					<td colspan="2" align="center" >
+						<input type="submit" value="添加" />&nbsp
+						<input type="reset" value="重置" />
+					</td>
+				</tr>
+			</form>
 		</center>
 	</body>
 </html>
