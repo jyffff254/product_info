@@ -1,0 +1,1 @@
+This is a product infomation system, including adding product¡¢editing product and procuct list.
