@@ -1,23 +1,21 @@
 <html>
 	<head>
-		<!-- <meta content="text/html; charset=UTF-8" http-equiv="content-type"> -->
-		<meta charset="UTF-8">
 		<title>商品信息管理</title>
 	</head>
 	<body>
 		<center>
-			<?php include("menu.php");//导入导航栏?>
+			<?php  include("menu.php"); //导入导航栏  ?>
 			<h3>发布商品信息<h3>
-			<form action="action.php?action=add" method="post" enctype="multipart/form-data">
-			<table border="0" width="400">
+			<form action="action.php?action=add" enctype="multipart/form-data" method="post">
+			<table border="0" width="300">
 				<tr>
-					<td align="right" >名称</td>
+					<td align="right">名称：</td>
 					<td><input type="text" name="name"/></td>
 				</tr>
 				<tr>
-					<td align="right" >类型</td>
+					<td align="right">类型：</td>
 					<td>
-						<select name="typelist">
+						<select name="typeid">
 						<?php 
 							include("dbconfig.php");
 							foreach($typelist as $k=>$v){
@@ -28,27 +26,29 @@
 					</td>
 				</tr>
 				<tr>
-					<td align="right" >单价</td>
+					<td align="right">单价：</td>
 					<td><input type="text" name="price"/></td>
 				</tr>
 				<tr>
-					<td align="right" >库存</td>
-					<td><input type="file" name="total"/></td>
+					<td align="right">库存：</td>
+					<td><input type="text" name="total"/></td>
 				</tr>
 				<tr>
-					<td align="right" >图片</td>
-					<td><input type="text" name="pic"/></td>
+					<td align="right">图片：</td>
+					<td><input type="file" name="pic"/></td>
 				</tr>
 				<tr>
-					<td align="right" >描述</td>
-					<td><textarea rows="10" cols="30"  name="note"/></textarea>
+					<td align="right" valign="top">描述：</td>
+					<td><textarea rows="5" cols="20" name="note"></textarea></td>
 				</tr>
 				<tr>
-					<td colspan="2" align="center" >
-						<input type="submit" value="添加" />&nbsp
-						<input type="reset" value="重置" />
+					
+					<td colspan="2" align="center">
+						<input type="submit" value="添加"/>&nbsp;&nbsp;&nbsp;
+						<input type="reset" value="重置"/>
 					</td>
 				</tr>
+			</table>
 			</form>
 		</center>
 	</body>

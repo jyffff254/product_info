@@ -1,11 +1,11 @@
 <?php
-	//数据库配置信息
-	define("HOST","localhost");
-	define("USER","root");
-	define("PASSWORD","123456");
-	define("DBNAME","demodb");
-	
-	//商品类型列表信息
-	$typelist = array(1=>"服装",2=>"数码",3=>"食品");
-	
-?>
+//公共信息配置文件
+
+//数据库信息配
+define("HOST","localhost"); //主机名
+define("USER","root");		//用户名
+define("PASS","root");		//密码
+define("DBNAME","demodb");	//数据库名
+
+//商品类型列表信息
+$typelist=array(1=>"服装",2=>"数码",3=>"食品");
